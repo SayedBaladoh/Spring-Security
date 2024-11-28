@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: spring-security
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:spring_security_demo}
+    username: ${POSTGRES_USERNAME:postgres}
+    password: ${POSTGRES_PASSWORD:pass12345}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: 8081
+
+security:
+  jwt:
+    secret-key: ${SECRET_KEY:AGgHUbsGwd4ywipmOB686bZm4SsaypBZIWgSjPWGFffPBSCBfbqUTNt5EoeBfrcqyD05L4K96A1}
+    token-duration: ${TOKEN_DURATION:1D}
+
