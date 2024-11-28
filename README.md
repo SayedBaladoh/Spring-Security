@@ -3,7 +3,7 @@ Implementations for Spring Security with different approaches.
 
 ---
 
-## Implemented Solution
+## Implemented Solutions
 - [JWT Authentication in Spring Boot 3 with Spring Security-6](./JWT-Authentication-in-Spring-Boot-3-with-Spring-Security-6)
 
 ---
