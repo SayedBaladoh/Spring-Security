@@ -54,7 +54,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
             filterChain.doFilter(request, response);
         } catch (Exception exception) {
-            // A try-catch block wraps the logic and uses the HandlerExceptionResolver to forward the error to the global exception handler.
+            // A try-catch block wraps the logic
+            // and uses the HandlerExceptionResolver to forward the error to the global exception handler.
             handlerExceptionResolver.resolveException(request, response, null, exception);
         }
     }

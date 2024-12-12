@@ -74,6 +74,6 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         log.info("Fetching role for name: {}.", name);
         return roleRepository
                 .findByName(name)
-                .orElseThrow(() -> new EntityNotFoundException(String.format("Role is not found with name: {}.", name)));
+                .orElseThrow(() -> new EntityNotFoundException(String.format("Role is not found with name: %s.", name)));
     }
 }
